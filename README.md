@@ -1,5 +1,7 @@
 # php-cs-fixer-config
 
+[![Build Status](https://travis-ci.org/air-media/php-cs-fixer-config.svg?branch=master)](https://travis-ci.org/air-media/php-cs-fixer-config)
+
 PHP-CS-Fixer config for Airmedia's projects.
 
 It's based on the ideas of [`refinery29/php-cs-fixer-config`](https://github.com/refinery29/php-cs-fixer-config/).
