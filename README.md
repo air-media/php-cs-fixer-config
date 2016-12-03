@@ -7,7 +7,7 @@ It's based on the ideas of [`refinery29/php-cs-fixer-config`](https://github.com
 ## Installation
 
 ```
-$ composer require airmedia/php-cs-fixer-config
+$ composer require airmedia/php-cs-fixer-config --dev
 ```
 
 ## Usage
