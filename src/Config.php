@@ -29,7 +29,7 @@ class Config extends BaseConfig
             'blank_line_before_return' => true,
             'braces' => true,
             'class_definition' => true,
-            'cast_spaces' => true,
+            'cast_spaces' => false,
             'class_keyword_remove' => false,
             'combine_consecutive_unsets' => true,
             'concat_space' => [
