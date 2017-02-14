@@ -48,7 +48,6 @@ class Config extends BaseConfig
             'heredoc_to_nowdoc' => false,
             'include' => true,
             'linebreak_after_opening_tag' => true,
-            'long_array_syntax' => false,
             'lowercase_cast' => true,
             'mb_str_functions' => false,
             'method_separation' => true,
