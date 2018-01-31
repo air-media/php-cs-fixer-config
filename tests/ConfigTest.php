@@ -10,16 +10,16 @@ use PhpCsFixer\Fixer\FixerInterface;
 use PhpCsFixer\FixerFactory;
 use PhpCsFixer\RuleSet;
 
-class ConfigTest extends \PHPUnit_Framework_TestCase
+class ConfigTest extends \PHPUnit\Framework\TestCase
 {
-    public function testImplementsInterface()
+    public function testImplementsInterface(): void
     {
         $config = new Config();
 
         $this->assertInstanceOf(ConfigInterface::class, $config);
     }
 
-    public function testReturnsCorrectValues()
+    public function testReturnsCorrectValues(): void
     {
         $config = new Config();
 
@@ -28,28 +28,28 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
         $this->assertTrue($config->getRiskyAllowed());
     }
 
-    public function testHasRules()
+    public function testHasRules(): void
     {
         $config = new Config();
 
         $this->assertNotEmpty($config->getRules());
     }
 
-    public function testAllRulesAreSupported()
+    public function testAllRulesAreSupported(): void
     {
         $config = new Config();
-        $ruleSet = RuleSet::create(array_map(function () {
+        $ruleSet = RuleSet::create(\array_map(function () {
             return true;
         }, $config->getRules()));
 
-        $configuredFixers = array_keys($ruleSet->getRules());
+        $configuredFixers = \array_keys($ruleSet->getRules());
         $availableFixers = $this->getAvailableFixers();
 
-        $unknownFixers = array_diff($configuredFixers, $availableFixers);
+        $unknownFixers = \array_diff($configuredFixers, $availableFixers);
 
-        $this->assertEmpty($unknownFixers, sprintf(
+        $this->assertEmpty($unknownFixers, \sprintf(
             'The rules contain unknown fixers (%s).',
-            implode(', ', $unknownFixers)
+            \implode(', ', $unknownFixers)
         ));
     }
 
@@ -58,7 +58,7 @@ class ConfigTest extends \PHPUnit_Framework_TestCase
         $fixerFactory = new FixerFactory();
         $fixerFactory->registerBuiltInFixers();
 
-        return array_map(function (FixerInterface $fixer) {
+        return \array_map(function (FixerInterface $fixer) {
             return $fixer->getName();
         }, $fixerFactory->getFixers());
     }
