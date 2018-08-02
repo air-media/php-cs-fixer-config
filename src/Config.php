@@ -58,7 +58,10 @@ class Config extends BaseConfig
             'multiline_comment_opening_closing' => false,
             'multiline_whitespace_before_semicolons' => true,
             'native_function_casing' => true,
-            'native_function_invocation' => true,
+            'native_function_invocation' => [
+                'exclude' => ['sort'],
+                'scope' => 'namespaced',
+            ],
             'new_with_braces' => true,
             'no_alias_functions' => true,
             'no_blank_lines_after_class_opening' => true,
