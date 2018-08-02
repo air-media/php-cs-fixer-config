@@ -49,7 +49,7 @@ class Config extends BaseConfig
             'is_null' => true,
             'linebreak_after_opening_tag' => true,
             'list_syntax' => [
-                'syntax' => 'long',
+                'syntax' => 'short',
             ],
             'lowercase_cast' => true,
             'magic_constant_casing' => true,
