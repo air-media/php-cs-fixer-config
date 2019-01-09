@@ -38,7 +38,7 @@ class ConfigTest extends \PHPUnit\Framework\TestCase
     public function testAllRulesAreSupported(): void
     {
         $config = new Config();
-        $ruleSet = RuleSet::create(\array_map(function () {
+        $ruleSet = RuleSet::create(\array_map(static function () {
             return true;
         }, $config->getRules()));
 
@@ -58,7 +58,7 @@ class ConfigTest extends \PHPUnit\Framework\TestCase
         $fixerFactory = new FixerFactory();
         $fixerFactory->registerBuiltInFixers();
 
-        return \array_map(function (FixerInterface $fixer) {
+        return \array_map(static function (FixerInterface $fixer) {
             return $fixer->getName();
         }, $fixerFactory->getFixers());
     }
