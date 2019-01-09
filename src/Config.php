@@ -98,7 +98,10 @@ class Config extends BaseConfig
             'not_operator_with_successor_space' => false,
             'object_operator_without_whitespace' => true,
             'ordered_class_elements' => true,
-            'ordered_imports' => true,
+            'ordered_imports' => [
+                'sort_algorithm' => 'alpha',
+                'imports_order' => 'class', 'const', 'function',
+            ],
             'php_unit_construct' => false,
             'php_unit_dedicate_assert' => false,
             'php_unit_expectation' => true,
