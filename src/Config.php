@@ -138,7 +138,7 @@ class Config extends BaseConfig
             'phpdoc_trim' => true,
             'phpdoc_types' => true,
             'phpdoc_types_order' => [
-                'null_adjustment' => 'always_first',
+                'null_adjustment' => 'always_last',
                 'sort_algorithm' => 'alpha',
             ],
             'phpdoc_var_without_name' => true,
@@ -157,7 +157,7 @@ class Config extends BaseConfig
             'single_quote' => true,
             'space_after_semicolon' => true,
             'standardize_not_equals' => true,
-            'static_lambda' => true,
+            'static_lambda' => false,
             'strict_comparison' => true,
             'strict_param' => false,
             'ternary_operator_spaces' => true,
