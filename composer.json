@@ -19,5 +19,14 @@
   },
   "require-dev": {
     "phpunit/phpunit": "^5.7"
+  },
+  "scripts": {
+    "check": [
+      "@cs-check",
+      "@test"
+    ],
+    "cs-check": "php-cs-fixer fix -v --diff --dry-run",
+    "cs-fix": "php-cs-fixer fix -v --diff",
+    "test": "phpunit --colors=always"
   }
 }
